@@ -1,19 +1,21 @@
-export const SeriesCard = (props) => {
+export const SeriesCard = ({data}) => {
+    // eslint-disable-next-line react/prop-types
+    const {id,img_url,name,rating,description,genre,cast,watch_url} = data;
     return (
         <li>
           <div className="App">
             <div>
-              <img src={props.curElem.img_url} alt={props.curElem.name} width="20%"/>
+              <img src={img_url} alt={name} width="40%"/>
             </div>
-            <h2>Name: {props.curElem.name} </h2>
-            <h3>Ratting: {props.curElem.rating} </h3>
-            <p>Summery: {props.curElem.description} </p>
-            <p>genre: {props.curElem.genre} </p>
-            <p>Cast: {props.curElem.cast} </p>
-            <a href={props.curElem.watch_url} target="_blank">
+            <h2>Name: {name} </h2>
+            <h3>Ratting: {rating} </h3>
+            <p>Summery: {description} </p>
+            <p>genre: {genre} </p>
+            <p>Cast: {cast} </p>
+            <a href={watch_url} target="_blank">
               <button>Watch Now</button>
             </a>
           </div>
         </li>
       );
-};
+}; 

@@ -4,7 +4,7 @@ const NetflixSeries = () => {
     return (
       <ul>
         {seriesData.map((curElem) => {
-          return <SeriesCard key={curElem.id} curElem = {curElem} />;
+          return <SeriesCard key={curElem.id} data={curElem} />;
         })}
       </ul>
     );
